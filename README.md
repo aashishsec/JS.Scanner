@@ -16,7 +16,7 @@ The script will output the results of the analysis to a file named 'output.txt'.
 Run the script using the following command: 
 
 
-python js_code_scanner.py path/to/url/file.txt.
+python3 JS-scanner.py path/to/url/file.txt.
 
 Contributing
 
