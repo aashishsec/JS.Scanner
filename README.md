@@ -10,10 +10,13 @@ Download the latest version of the Firefox WebDriver from here and add it to you
 
 Usage
 
-Create a file containing the list of URLs to scan, with one URL per line.
-Run the script using the following command: python js_code_scanner.py path/to/url/file.txt.
-file.txt should contain all js urls.
+Create a file containing the list of URLs to scan, with one URL per line.file.txt should contain all js urls.
 The script will output the results of the analysis to a file named 'output.txt'.
+
+Run the script using the following command: 
+
+
+python js_code_scanner.py path/to/url/file.txt.
 
 Contributing
 
