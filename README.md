@@ -18,10 +18,13 @@ Run the script using the following command:
 
 python3 JS-scanner.py path/to/url/file.txt.
 
-https://tenor.com/en-GB/view/software-engineer-develop-study-programming-coding-gif-16132870
+
+
+![image](https://github.com/aashish36/JSScanner/assets/65489287/22a4a22d-6941-4448-958a-22d8671dff51)
+
 
 Contributing
 
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
 
-https://tenor.com/en-GB/view/coding-kira-lena-urzendowsky-how-to-sell-drugs-online-fast-hacking-gif-17761682
+![image](https://github.com/aashish36/JSScanner/assets/65489287/70f7e3a8-e95f-429b-9433-89087daad721)
