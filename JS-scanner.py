@@ -19,7 +19,7 @@ print('''
         
         Just wait things takes time.................
         
-        Output will be in the form bellow😎😎
+        Output will be stored in current folder😎😎
         
 ''')
 
