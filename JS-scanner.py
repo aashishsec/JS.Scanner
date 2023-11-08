@@ -17,9 +17,7 @@ print('''
                                               
         Github   : https://github.com/aashish36
         
-        Just wait things takes time.................
-        
-        Output will be stored in current folder😎😎
+        Just wait things takes time...
         
 ''')
 
