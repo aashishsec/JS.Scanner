@@ -1,7 +1,9 @@
 # JS Code Scanner
 
 - This is a Python script that uses the Selenium WebDriver to scan a list of URLs containing JavaScript code, and checks for sensitive information such as API keys, credentials, personal data, tokens, or URLs.
+  
 -  The script identifies sensitive data using regular expressions defined in the 'patterns' dictionary.
+
 -  Works in all platforms.
 
 ## Installation
