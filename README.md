@@ -39,10 +39,6 @@ python3 JS-scanner.py path/to/url/file.txt
 ```
 
 
-
-![image](https://github.com/aashish36/JSScanner/assets/65489287/22a4a22d-6941-4448-958a-22d8671dff51)
-
-
 ## Contributing
 
 - Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
