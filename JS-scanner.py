@@ -1,9 +1,37 @@
 import re
-import sys
+import random
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException, WebDriverException
+import colorama
+import argparse
 
-print('''
+
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
+green = Fore.GREEN
+magenta = Fore.MAGENTA
+cyan = Fore.CYAN
+mixed = Fore.RED + Fore.BLUE
+red = Fore.RED
+blue = Fore.BLUE
+yellow = Fore.YELLOW
+white = Fore.WHITE
+colors = [magenta,cyan,mixed,red,blue,yellow, white]
+random_color = random.choice(colors)
+bold = Style.BRIGHT
+
+
+parser=argparse.ArgumentParser(description=f"{bold}{random_color}JSScanner is a tool designed to efficiently scan to find Sensitive Files like API keys, Emails, Phone No, URLs etc.....")
+parser.add_argument('-l','--list',metavar='list',type=str,help=f"[{bold}{random_color}INFO]: {bold}{random_color}List of JS URLs.")
+parser.add_argument('-o','--output',metavar='output',type=str,help=f"[{bold}{random_color}INFO]: {bold}{random_color}File to save our output.")
+args=parser.parse_args()
+list=args.list
+output=args.output
+
+
+def banner():
+
+    print(f'''{bold}{random_color}
 
 
 ░░░░░██╗░██████╗░░░░██████╗░█████╗░░█████╗░███╗░░██╗███╗░░██╗███████╗██████╗░
@@ -15,27 +43,23 @@ print('''
 
         Author   : Aashish💕💕  
                                               
-        Github   : https://github.com/aashish36
-        
-        Just wait things takes time...
+        Github   : https://github.com/aashis36
         
 ''')
+
 
 # Define the regex patterns
 patterns = {
     'api_key': re.compile(r'[A-Za-z0-9]{32}'),
-    'creds': re.compile(r'(?:password|passwd|pwd|user|username|usr|email|e-mail|mail)\s*=\s*[\'"]?([A-Za-z0-9@#$%^&*()_+-]+)'),
+    'creds': re.compile(r'(?:password|passwd|pwd|user|key|username|usr|email|e-mail|mail)\s*=\s*[\'"]?([A-Za-z0-9@#$%^&*()_+-]+)'),
     'personal_data': re.compile(r'(?:name|email|phone)\s*=\s*[\'"]?([^\'" >]+)'),
     'token': re.compile(r'[A-Za-z0-9-_]{64}'),
     'url': re.compile(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+')
 }
 
-# Get the file path argument from the command line
-if len(sys.argv) < 2:
-    print("Please provide the path to the file containing JS URLs")
-    sys.exit(1)
+js_file_path = list
 
-js_file_path = sys.argv[1]
+banner()
 
 # Create a new instance of the Firefox driver
 driver = webdriver.Firefox()
