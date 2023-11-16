@@ -64,6 +64,8 @@ banner()
 # Create a new instance of the Firefox driver
 driver = webdriver.Firefox()
 
+
+
 # Read the file containing JS URLs
 with open(js_file_path) as f:
     js_urls = f.read().splitlines()
@@ -71,7 +73,10 @@ with open(js_file_path) as f:
 output_lines = []
 
 for js_url in js_urls:
+
     output_lines.append(f'Processing JS URL: {js_url}\n')
+
+    print(f'{bold}{random_color}Processing JS URL: {js_url}\n')
 
     try:
         # Navigate to the JavaScript file
@@ -86,16 +91,21 @@ for js_url in js_urls:
 
         if any(matches):
             output_lines.append("Sensitive data found:\n")
+            print(f"{bold}{random_color}Sensitive data found:\n")
             for pattern_name in patterns:
                 pattern = patterns.get(pattern_name)
                 pattern_matches = pattern.findall(javascript_code)
                 if pattern_matches:
                     output_lines.append(f'{pattern_name.upper()} Found:')
+                    print(f'{bold}{random_color}{pattern_name.upper()} Found:')
                     for match in pattern_matches:
                         output_lines.append(f'- {match}')
+                        print(f'{bold}{random_color}- {match}')
                     output_lines.append('')
+                    print('')
         else:
             output_lines.append("No sensitive data found.\n")
+            print(f"{bold}{random_color}No sensitive data found.\n")
 
     except TimeoutException:
         output_lines.append("Timeout error occurred while loading the URL.\n")
