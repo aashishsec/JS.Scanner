@@ -22,8 +22,8 @@ bold = Style.BRIGHT
 
 
 parser=argparse.ArgumentParser(description=f"{bold}{random_color}JSScanner is a tool designed to efficiently scan to find Sensitive Files like API keys, Emails, Phone No, URLs etc.....")
-parser.add_argument('-l','--list',metavar='list',type=str,help=f"[{bold}{random_color}INFO]: {bold}{random_color}List of JS URLs.")
-parser.add_argument('-o','--output',metavar='output',type=str,help=f"[{bold}{random_color}INFO]: {bold}{random_color}File to save our output.")
+parser.add_argument('-l','--list',metavar='list',type=str,required=True,help=f"[{bold}{random_color}INFO]: {bold}{random_color}List of JS URLs.")
+parser.add_argument('-o','--output',metavar='output',type=str,default="output.txt",help=f"[{bold}{random_color}INFO]: {bold}{random_color}File to save our output.")
 args=parser.parse_args()
 list=args.list
 output=args.output
