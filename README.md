@@ -1,11 +1,21 @@
 # JS Code Scanner
 
-- This is a Python script that uses the Selenium WebDriver to scan a list of URLs containing JavaScript code, and checks for sensitive information such as API keys, credentials, personal data, tokens, or URLs.
+## Introduction
+
+- JSScanner is a Python tool that uses Selenium to scan JavaScript files for sensitive information.
   
--  The script identifies sensitive data using regular expressions defined in the 'patterns' dictionary.
+- It reads a list of JavaScript file URLs, loads each URL in a headless Firefox browser, extracts the JavaScript code, and searches for predefined patterns indicative of sensitive information using regular expressions.
 
 -  Works in all platforms.
+  
+## Features
 
+- Scans JavaScript files for sensitive data.
+  
+- Supports the detection of API keys, credentials, personal data, tokens, and URLs.
+  
+- Headless browser mode for improved performance.
+  
 ## Installation
 
 - Clone the repository to your local machine.
@@ -13,7 +23,6 @@
 - Install the required dependencies using pip: pip install -r requirements.txt.
   
 - Download the latest version of the Firefox WebDriver from here and add it to your PATH environment variable.
-
 
 
 ```bash
@@ -37,7 +46,6 @@ pip install -r requirements.txt
 python3 JS-scanner.py path/to/url/file.txt
 
 ```
-
 
 ## Contributing
 
