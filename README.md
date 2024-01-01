@@ -1,5 +1,7 @@
 # JS Code Scanner
 
+[Tool link](https://github.com/aashishsec/JS.Scanner)
+
 ## Introduction
 
 - JSScanner is a Python tool that uses Selenium to scan JavaScript files for sensitive information.
